@@ -14,4 +14,6 @@ https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 
 LLVM Coding standard:
 https://llvm.org/docs/CodingStandards.html
- 
+
+GNU Coding Standards:
+https://www.gnu.org/prep/standards/standards.html
