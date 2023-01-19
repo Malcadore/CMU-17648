@@ -7,3 +7,7 @@ Revision 0
 This config is currently the default config dump from clang.
 
 > clang-format -style=llvm -dump-config > llvm-style.config
+>
+> ### LLVM Documentation ###
+>
+> https://clang.llvm.org/docs/ClangFormatStyleOptions.html
