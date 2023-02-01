@@ -1,7 +1,14 @@
 # CMU-17648
 Repository for coding standard configuration and documentation for CMU 17648 Sensor Based Systems.
 
-Revision 0
+Revision 1
+
+### Callback Snippet ###
+This folder has everything needed to work through setting up a callback between python and a c library.  Build the library with the makefile and then call the harness script, it should run like a unit test.
+
+make
+
+python3 harness.py
 
 ### LLVM Configuration ###
 This config is currently the default config dump from clang.
