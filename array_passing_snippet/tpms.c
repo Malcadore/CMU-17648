@@ -14,7 +14,7 @@ void init(void (*ptr)(int *)) {
 * one byte at a time.  This is similar to how bytes
 * are 'clocked out' of a microcontroller.
 */
-void transmit_bytewise(int array[], int length) {
+void transmit_array(int array[], int length) {
 	for(int i = 0 ; i < length ; i++) {
 		(*callback)(&array[i]);
 	}
@@ -47,5 +47,5 @@ void process(int value) {
 * message to uint16_t before using them. 
 */ 
 void receive(int message[], int length) {
-    transmit_bytewise(message, length);
+    transmit_array(message, length);
 }
