@@ -18,11 +18,11 @@ uint32_t event_log[EVENTLOG_SZ] = { [0 ... EVENTLOG_SZ - 1] = 0};
 
 /** process
 * This function receives values from the test harness.
-* The necessity of this is to use a signed integer, and
-* for program 2, the value should be cast to unit16_t.
-* This demo program will execute on the harness's thread.
-* We're simply taking the input value from the harness
-* and echoing it right back over the callback into the harness.
+* The necessity of this is to use a signed integer.  Any
+* type management should be handled as needed by your 
+* program.  Here is only a demonstration of adding data
+* to the log buffers and rolling over the contents after
+* the the size index has been exceeded.
 */
 int pindex = 0;
 int eindex = 0;
