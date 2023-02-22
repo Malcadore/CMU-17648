@@ -1,6 +1,6 @@
 import unittest
 import ctypes
-import subprocess
+import _ctypes
 from ctypes import CFUNCTYPE
 from ctypes import c_void_p
 from ctypes import POINTER
@@ -23,6 +23,9 @@ class Harness(unittest.TestCase):
         self.clib.get_event_log.argtype = POINTER(ctypes.c_uint32)
         self.clib.get_event_log.restype = None
 
+    def tearDown(self):
+        _ctypes.dlclose(self.clib._handle)
+        del self.clib
 
     def test_pressurelog(self):
         """ test_pressurelog
